@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Artur Bagautdinov](https://up.htmlacademy.ru/htmlcss/24/user/849291).
-* Наставник: [Дмитрий Мирошниченко :)] (https://htmlacademy.ru/profile/id591417)
+* Наставник: [Дмитрий Мирошниченко :)] (https://up.htmlacademy.ru/htmlcss/24/user/591417)
 
 ---
 
