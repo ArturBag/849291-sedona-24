@@ -14,14 +14,113 @@
 						<li class="navigation-items-item"><a href="">Гостинницы</a></li>
 					</ul>
 					<p class="logo">
-						<a>
+						<a href="index.html" class="main-link">
 							<img class="logo-image" src="img/logo.svg" width="140" height="72" alt="Логотип города Седона">
 						</a>
 					</p>
 				</nav>
 			</header>
 			<main class="container">
-
+				<section class="search-filters">
+					<h2 class="visually-hidden">Форма подбора жилья</h2>
+					<form action="https://htmlacademy.ru/" method="get" oninput="first.value=rangecount.value">
+						<fieldset>
+							<legend>Инфраструктура:</legend>
+							<ul class="infrastructure-types">
+								<li><input type="checkbox" value="pool" checked>Бассей</li>
+								<li><input type="checkbox" value="parking">Парковка</li>
+								<li><input type="checkbox" value="wi-fi">wi-fi</li>
+							</ul>
+						</fieldset>
+						<fieldset>
+							<legend>Тип жилья:</legend>
+							<ul class="accommodation-types">
+								<li><input type="checkbox" value="hotel" checked>Гостиница</li>
+								<li><input type="checkbox" value="motel" checked>Мотель</li>
+								<li><input type="checkbox" value="appartments" checked>Аппартаменты</li>
+							</ul>
+						</fieldset>
+						<fieldset>
+							<legend>Стоимость в сутки (Р):</legend>
+								<p class="price-range">
+									от <output name="first">0</output>
+									до <output name="last">3000</output>
+								</p>
+								<p class="price-input">
+									<input type="range" min="0" max="3000" step="50" id="rangecount">
+								</p>
+						</fieldset>
+						<button type="submit" class="search-btn">Показать</button>
+					</form>	
+				</section>
+				<section class="sort">
+					<h2 class="visually-hidden">Сортирование</h2>
+					<span class="sort-found">Найдено:</span>
+					<span>Сортировка:</span>
+					<ul class="sort-types">
+						<li class="sort-type"><a href="#" class="current-filter">По цене</a></li>
+						<li class="sort-type"><a href="#">По типу</a></li>
+						<li class="sort-type"><a href="#">По рейтингу</a></li>
+					</ul>
+					<ul class="sort-triangles">
+						<li class="triangle triangle-up"><a href="#">Треугольник вверх</a></li>
+						<li class="triangle triangle-down"><a href="#" class="current-filter">Треугольник вниз</a></li>
+					</ul>
+				</section>
+				<section class="search-results">
+					<h2 class="visually-hidden">Результаты поиска</h2>
+					<article class="search-results-item">
+						<h3 class="visually-hidden">Гостиница Amara Resort & Spa</h3>
+						<div class="item-description">
+							<img class="item-image" src="img/hotel.jpg" alt="Фото гостиницы Amara Resort & Spa" width="135" height="90">
+							<p class="item-info">
+								<b>Amara Resort & Spa</b><br>
+								<span>Гостиница</span>
+								<span>от 4000 Р.</span><br>
+								<a class="item-info-link" href="#">Подробнее</a>
+								<button>Забронировать</button>
+							</p>
+						</div>
+						<div class="item-feedback">
+							<img class="item-feedback-image" src="img" alt="4 зезды" width="1" height="1"> <!-- звезды -->
+							<span>Рейтинг:8,5</span>
+						</div>
+					</article>
+					<article class="search-results-item">
+						<h3 class="visually-hidden">Мотель Desert Quail Inn</h3>
+						<div class="item-description">
+							<img class="item-image" src="img/motel.jpg" alt="Фото мотеля Desert Quail Inn" width="135" height="90">
+							<p class="item-info">
+								<b>Amara Resort & Spa</b><br>
+								<span>Мотель</span>
+								<span>от 3000 Р.</span><br>
+								<a class="item-info-link" href="#">Подробнее</a>
+								<button>Забронировать</button>
+							</p>
+						</div>
+						<div class="item-feedback">
+							<img class="item-feedback-image" src="img/3.jpg" alt="3 звезды" width="1" height="1"> <!-- звезды -->
+							<span>Рейтинг:8,9</span>
+						</div>
+					</article>
+					<article class="search-results-item">
+						<h3 class="visually-hidden">Гостиница Amara Resort & Spa</h3>
+						<div class="item-description">
+							<img class="item-image" src="img/appartments.jpg" alt="Фото апартаментов Villas at Poco Diablo" width="135" height="90">
+							<p class="item-info">
+								<b>Villas at Poco Diablo</b><br>
+								<span>Апартаменты</span>
+								<span>от 2000 Р.</span><br>
+								<a class="item-info-link" href="#">Подробнее</a>
+								<button>Забронировать</button>
+							</p>
+						</div>
+						<div class="item-feedback">
+							<img class="item-feedback-image" src="img/2.jpg" alt="2 звезды" width="1" height="1"> <!-- звезды -->
+							<span>Рейтинг:9,2</span>
+						</div>
+					</article>
+				</section>
 			</main>
 			<footer class="main-footer">
 				<p class="main-footer-hash">
