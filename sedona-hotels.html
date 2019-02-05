@@ -13,48 +13,60 @@
 						<li class="navigation-items-item"><a href="">Карта штата</a></li>
 						<li class="navigation-items-item"><a href="">Гостинницы</a></li>
 					</ul>
-					<p class="logo">
-						<a href="index.html" class="main-link">
-							<img class="logo-image" src="img/logo.svg" width="140" height="72" alt="Логотип города Седона">
-						</a>
-					</p>
 				</nav>
+				<p class="logo">
+					<a href="index.html" class="main-link" aria-label="ссылка на главную страницу">
+						<img class="logo-image" src="img/logo.svg" width="140" height="72" alt="Логотип города Седона">
+					</a>
+				</p>
 			</header>
 			<main class="container">
 				<section class="search-filters">
 					<h2 class="visually-hidden">Форма подбора жилья</h2>
-					<form action="https://htmlacademy.ru/" method="get" oninput="first.value=rangecount.value">
+					<form action="https://echo.htmlacademy.ru" method="get" oninput="first.value=rangecount.value">
 						<fieldset>
 							<legend>Инфраструктура:</legend>
 							<ul class="infrastructure-types">
-								<li><input type="checkbox" value="pool" checked>Бассей</li>
-								<li><input type="checkbox" value="parking">Парковка</li>
-								<li><input type="checkbox" value="wi-fi">wi-fi</li>
+								<label>								
+									<li><input type="checkbox" value="pool" checked>Бассейн</li>
+								</label>
+								<label>	
+									<li><input type="checkbox" value="parking">Парковка</li>
+								</label>
+								<label>	
+									<li><input type="checkbox" value="wi-fi">wi-fi</li>
+								</label>
 							</ul>
 						</fieldset>
 						<fieldset>
 							<legend>Тип жилья:</legend>
 							<ul class="accommodation-types">
-								<li><input type="checkbox" value="hotel" checked>Гостиница</li>
-								<li><input type="checkbox" value="motel" checked>Мотель</li>
-								<li><input type="checkbox" value="appartments" checked>Аппартаменты</li>
+								<label>	
+									<li><input type="checkbox" value="hotel" checked>Гостиница</li>
+								</label>	
+								<label>	
+									<li><input type="checkbox" value="motel" checked>Мотель</li>
+								<label/>	
+								<label>	
+									<li><input type="checkbox" value="apartments" checked>Апартаменты</li>
+								</label>	
 							</ul>
 						</fieldset>
 						<fieldset>
 							<legend>Стоимость в сутки (Р):</legend>
 								<p class="price-range">
-									от <output name="first">0</output>
-									до <output name="last">3000</output>
+									от <output name="first" aria-label="Минимальная стоимость">0</output>
+									до <output name="last" aria-label="Максимальная стоимость">3000</output>
 								</p>
 								<p class="price-input">
-									<input type="range" min="0" max="3000" step="50" id="rangecount">
+									<input type="range" min="0" max="3000" step="50" id="rangecount" aria-label="Ползунок управления диапазоном цены">
 								</p>
 						</fieldset>
 						<button type="submit" class="search-btn">Показать</button>
 					</form>	
 				</section>
 				<section class="sort">
-					<h2 class="visually-hidden">Сортирование</h2>
+					<h2 class="visually-hidden">Сортирование результатов поиска</h2>
 					<span class="sort-found">Найдено:</span>
 					<span>Сортировка:</span>
 					<ul class="sort-types">
@@ -63,8 +75,8 @@
 						<li class="sort-type"><a href="#">По рейтингу</a></li>
 					</ul>
 					<ul class="sort-triangles">
-						<li class="triangle triangle-up"><a href="#">Треугольник вверх</a></li>
-						<li class="triangle triangle-down"><a href="#" class="current-filter">Треугольник вниз</a></li>
+						<li class="triangle triangle-up"><a href="#" aria-label="от дорогих к дешевым" class="sort-triangles-current"></a></li>
+						<li class="triangle triangle-down"><a href="#" aria-label="от дешевым к дорогих"></a></li>
 					</ul>
 				</section>
 				<section class="search-results">
@@ -130,9 +142,9 @@
 				</p>
 				<div class="main-footer-socials">
 					<ul class="social-networks">
-						<li><a href="#" class="social-networks-icon social-networks-twitter">Твиттер</a></li>
-						<li><a href="#" class="social-networks-icon social-networks-facebook">Фейсбук</a></li>
-						<li><a href="#" class="social-networks-icon social-networks-youtube">Ютуб</a></li>
+						<li><a href="#" class="social-networks-icon social-networks-twitter" aria-label="ссылка на страницу города в твиттере"></a></li>
+						<li><a href="#" class="social-networks-icon social-networks-facebook" aria-label="ссылка на страницу города в фейсбуке"></a></li>
+						<li><a href="#" class="social-networks-icon social-networks-youtube" aria-label="ссылка на страницу города в ютубе"></a></li>
 					</ul>
 				</div>
 				<p class="footer-copyright">
