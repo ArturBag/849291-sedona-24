@@ -3,15 +3,18 @@
 		<head>
 			<meta charset="utf-8">
 			<title>Sedona</title>
+			<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+			<link href="css/normalize.css" rel="stylesheet">
+			<link rel="stylesheet" href="css/styles.css">
 		</head>
 		<body>
 			<header class="main-header">
 				<nav class="main-navigation">
 					<ul class="navigation-items">
-						<li class="navigation-items-item"><a href="">Информация</a></li>
-						<li class="navigation-items-item"><a href="">Фото и видео</a></li>
-						<li class="navigation-items-item"><a href="">Карта штата</a></li>
-						<li class="navigation-items-item"><a href="">Гостинницы</a></li>
+						<li class="navigation-items-item navigation-items-current"><a>Информация</a></li>
+						<li class="navigation-items-item"><a href="#">Фото и видео</a></li>
+						<li class="navigation-items-item"><a href="#">Карта штата</a></li>
+						<li class="navigation-items-item"><a href="#">Гостинницы</a></li>
 					</ul>
 				</nav>
 					<a  class="logo">
@@ -34,7 +37,7 @@
 									<li class="advantages-item-description">
 										<h3 class="advantages-item-heading">Настоящий городок</h3>
 										<span> №1 </span>
-										<span>Седона — не аттракцион для туристов, там течёт своя жизнь</span>
+										<span class="item-subheading">Седона — не аттракцион для туристов, там течёт своя жизнь</span>
 									</li>
 									<li class="advantages-item-photo">
 										<img class="advantages-item-image" src="img/town.jpg" width="800" height="256" alt="Фото города">
@@ -43,35 +46,35 @@
 							</li>
 							<li class="advantages-item">
 								<ul class="advantages-item-section">
-									<li class="">
+									<li class="advantages-item-photo">
 										<img class="advantages-item-image" src="img/bridge.jpg" width="800" height="256" alt="Мост дьявола">
 									</li>
-									<li>
+									<li class="advantages-item-description">
 										<h3 class="advantages-item-heading">Там есть Мост дьявола</h3>
 										<span>№2</span>
-										<span>Да, по нему можно пройти! Если конечно вы осмелитесь</span>
+										<span class="item-subheading">Да, по нему можно пройти! Если конечно вы осмелитесь</span>
 									</li>
 								</ul>
 							</li>
 							<li class="advantages-item">
 								<div>
-									<h3 class="advantages-item-heading">Небольшая площадь</h3>
+									<h3 class="advantages-item-heading item-heading-bottom">Небольшая площадь</h3>
 									<span>№3</span>
-									<span>Все достопримечательности находятся очень близко</span>
+									<span class="item-subheading">Все достопримечательности находятся очень близко</span>
 								</div>
 							</li>
 							<li class="advantages-item">
 								<div>
-									<h3 class="advantages-item-heading">Красивая дорога</h3>
+									<h3 class="advantages-item-heading item-heading-bottom">Красивая дорога</h3>
 									<span>№4</span>
-									<span>Ехать в Седону из Лас-Вегаса совсем не скучно!</span>
+									<span class="item-subheading">Ехать в Седону из Лас-Вегаса совсем не скучно!</span>
 								</div>
 							</li>
 							<li class="advantages-item">
 								<div>
-									<h3 class="advantages-item-heading">Мало туристов</h3>
+									<h3 class="advantages-item-heading item-heading-bottom">Мало туристов</h3>
 									<span>№5</span>
-									<span>Большинство едет в гранд каньон и толпится там</span>
+									<span class="item-subheading">Большинство едет в гранд каньон и толпится там</span>
 								</div>
 							</li>
 							<li class="advantages-item advantages-item-features">
@@ -106,18 +109,26 @@
 							<h3 class="visually-hidden">Форма поиска гостинницы</h3>
 							<p>
 								<label for="check-in">Дата заезда:</label>
-								<input type="text" name="check-in-date" id="check-in" value="24 апреля 2017">
+								<input type="text" name="check-in-date" id="check-in" value="24 апреля 2017" class="check-in-date">
 							</p>
 							<p>
 								<label for="check-out">Дата выезда:</label>
-								<input type="text" name="check-out-date" id="check-out" value="4 июля 2017">
+								<input type="text" name="check-out-date" id="check-out" value="4 июля 2017" class="check-out-date">
 							</p>
-							<p>
-								<label for="adults-field">Взрослые</label>
-								<input type="text" name="adults" id="adults-field">
-								<label for="children-field">Дети</label>
-								<input type="text" name="children" id="children-field">
-							</p>
+							<div class="form-item">
+								<p>
+									<label for="adults-field">Взрослые</label>
+									<button class="value-decrease">-</button>
+									<input type="text" name="adults" id="adults-field" class="adults-line" value="2">
+									<button class="value-increase">+</button>
+								</p>
+								<p>
+									<label for="children-field">Дети</label>
+									<button class="value-decrease">-</button>
+									<input type="text" name="children" id="children-field" class="children-line" value="0">
+									<button class="value-increase">+</button>
+								</p>
+							</div>
 							<button type="submit" class="form-btn">Найти</button>
 						</form>
 					</div>

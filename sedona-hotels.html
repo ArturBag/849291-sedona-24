@@ -3,15 +3,18 @@
 		<head>
 			<meta charset="utf-8">
 			<title>Sedona</title>
+			<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+			<link href="css/normalize.css" rel="stylesheet">
+			<link rel="stylesheet" href="css/styles.css">
 		</head>
-		<body>
+		<body class="inner-page">
 			<header class="main-header">
 				<nav class="main-navigation">
 					<ul class="navigation-items">
 						<li class="navigation-items-item"><a href="">Информация</a></li>
 						<li class="navigation-items-item"><a href="">Фото и видео</a></li>
 						<li class="navigation-items-item"><a href="">Карта штата</a></li>
-						<li class="navigation-items-item"><a href="">Гостинницы</a></li>
+						<li class="navigation-items-item navigation-items-current"><a>Гостинницы</a></li>
 					</ul>
 				</nav>
 					<a href="index.html" class="logo" aria-label="ссылка на главную страницу">
@@ -21,24 +24,21 @@
 			<main class="container">
 				<section class="search-filters">
 					<h2 class="visually-hidden">Форма подбора жилья</h2>
-					<form action="https://echo.htmlacademy.ru" method="get" oninput="first.value=rangecount.value">
+					<form action="https://echo.htmlacademy.ru" method="get" class="filters-form">
 						<fieldset>
 							<legend>Инфраструктура:</legend>
-							<ul class="infrastructure-types">								
+							<ul class="infrastructure-types">	
 								<li>
-									<label>
-										<input type="checkbox" value="pool" checked>Бассейн
-									</label>
+									<input type="checkbox" value="pool" id="checkbox-pool" checked>
+									<label for="checkbox-pool">Бассейн</label>	
 								</li>
 								<li>
-									<label>	
-										<input type="checkbox" value="parking">Парковка
-									</label>
+									<input type="checkbox" id="checkbox-parking" value="parking">
+									<label for="checkbox-parking">Парковка</label>
 								</li>
 								<li>
-									<label>	
-										<input type="checkbox" value="wi-fi">wi-fi
-									</label>
+									<input type="checkbox" id="checkbx-wifi" value="wi-fi">
+									<label for="checkbx-wifi">wi-fi</label>
 								</li>
 							</ul>
 						</fieldset>
@@ -62,8 +62,8 @@
 						<fieldset>
 							<legend>Стоимость в сутки (Р):</legend>
 								<p class="price-range">
-									<input type="text" name="first" value="от 0" aria-label="Минимальная стоимость">
-									<input type="text" value="до 3000" aria-label="Максимальная стоимость">
+									<input type="text" name="first" placeholder="от 0" aria-label="Минимальная стоимость">
+									<input type="text" placeholder="до 3000" aria-label="Максимальная стоимость">
 								</p>
 								<div class="price-change" aria-label="Ползунок управления диапазоном цены">
 									<button class="button-min"  aria-label="Минимальное значение"></button>
@@ -78,11 +78,11 @@
 					<span class="sort-found">Найдено:</span>
 					<h3>Сортировка:</h3>
 					<ul class="sort-types">
-						<li class="sort-type"><a href="#" class="current-filter">По цене</a></li>
+						<li class="sort-type current-filter"><a>По цене</a></li>
 						<li class="sort-type"><a href="#">По типу</a></li>
 						<li class="sort-type"><a href="#">По рейтингу</a></li>
-						<li class="sort-type triangle-up"><a href="#" aria-label="от дорогих к дешевым" class="sort-triangle-current">Треугольник вверх</a></li>
-						<li class="sort-type triangle-down"><a href="#" aria-label="от дешевым к дорогих">Треугольник вниз</a></li>
+						<li class="sort-increase"><a href="#" aria-label="от дорогих к дешевым" class="sort-current">По возрастанию</a></li>
+						<li class="sort-decrease"><a href="#" aria-label="от дешевым к дорогих">По убыванию</a></li>
 					</ul>
 				</section>
 				<section class="search-results">
@@ -96,11 +96,16 @@
 								<span>Гостиница</span>
 								<span>от 4000 Р.</span><br>
 								<a class="item-info-link" href="#">Подробнее</a>
-								<button>Забронировать</button>
+								<button class="booking-button">Забронировать</button>
 							</p>
 						</div>
 						<div class="item-feedback">
-							<img class="item-feedback-image" src="img" alt="4 зезды" width="1" height="1"> <!-- звезды -->
+							<ul>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
 							<span>Рейтинг:8,5</span>
 						</div>
 					</article>
@@ -113,11 +118,15 @@
 								<span>Мотель</span>
 								<span>от 3000 Р.</span><br>
 								<a class="item-info-link" href="#">Подробнее</a>
-								<button>Забронировать</button>
+								<button class="booking-button">Забронировать</button>
 							</p>
 						</div>
 						<div class="item-feedback">
-							<img class="item-feedback-image" src="img/3.jpg" alt="3 звезды" width="1" height="1"> <!-- звезды -->
+							<ul>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
 							<span>Рейтинг:8,9</span>
 						</div>
 					</article>
@@ -130,17 +139,20 @@
 								<span>Апартаменты</span>
 								<span>от 2000 Р.</span><br>
 								<a class="item-info-link" href="#">Подробнее</a>
-								<button>Забронировать</button>
+								<button class="booking-button">Забронировать</button>
 							</p>
 						</div>
 						<div class="item-feedback">
-							<img class="item-feedback-image" src="img/2.jpg" alt="2 звезды" width="1" height="1"> <!-- звезды -->
+							<ul>
+								<li></li>
+								<li></li>
+							</ul>
 							<span>Рейтинг:9,2</span>
 						</div>
 					</article>
 				</section>
 			</main>
-			<footer class="main-footer">
+			<footer class="main-footer inner-footer">
 				<p class="main-footer-hash">
 					<a href="#" class="hashtag">
 						#visitsedona
