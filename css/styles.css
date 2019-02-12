@@ -12,9 +12,6 @@ body {
 	color:#333333;
 	font-family: 'PT Sans', Arial, sans-serif;
 	text-transform: uppercase;
-	background-color: #ffffff;
-	background:url('../img/background photo.jpg') no-repeat;
-	background-size: contain;
 }
 .inner-page {
 	background-image: none;
@@ -49,14 +46,13 @@ a {
 	opacity: 0.3;
 	color: #000000;
 }
-.navigation-items-current a,
-.navigation-items-current a:hover,
-.navigation-items-current a:focus, 
-.navigation-items-current a:active {
+.navigation-items-current a {
 	color: #766357;
 }
-.gpreview{
+
+.preview{
 	background-color: #ddd0d4;
+	background:url('../img/background photo.jpg') no-repeat;
 }
 .main-heading {
 	font-size: 21px;
@@ -101,7 +97,7 @@ a {
 	font-size: 30px;
 	line-height: 36px;
 	color: #333333;
-	font-family: "PT Sans";
+	font-family: inherit;
 	font-weight: 700;
 }
 .reservation-subtitle{
@@ -152,7 +148,7 @@ a {
 	outline: 2px solid #e5e5e5;
 	background-color: transparent;
 }
-.hotel-booking .form input[value] {
+.hotel-booking .form input {
 	font-weight: bold;
 	text-transform: uppercase;
 }
@@ -230,10 +226,6 @@ a {
 	color:#ffffff;
 	font-weight: 400;
 }
-/*.search-filters fieldset label:hover,
-.search-filters fieldset label:focus {
-	outline:2px solid #ffffff;
-}*/
 .search-filters input[type="checkbox"] {
 	width: 23px;
 	height: 23px;
@@ -241,20 +233,25 @@ a {
 }
 .search-filters input[type="checkbox"]:hover,
 .search-filters input[type="checkbox"]:focus {}
-.search-filters input[placeholder] {
+.search-filters input {
 	color: #ffffff;
-	font-family: "PT Sans";
-	font-size: 14px;
+	font-family: inherit;
 	font-weight: 400;
 	line-height: 21px;
 	text-transform: uppercase;
 	background: transparent;
 	border: 2px solid #ffffff;
 }
+.price-range{
+	color: #ffffff;
+	font-family: inherit;
+}
+.search-filters input[type="text"] {
+	background: transparent;
+}
 .search-btn {
 	color: #ffffff;
-	font-family: "PT Sans";
-	font-size: 14px;
+	font-family: inherit;
 	font-weight: 400;
 	line-height: 21px;
 	text-transform: uppercase;
@@ -336,21 +333,35 @@ a {
 .booking-button:active {
 	background-color: #503e33;
 }
-.item-feedback {
+.item-feedback .mark {
 	background-color: #f2f2f2;
-	color: #666666;
-	font-weight: 400;
-}
-.item-feedback ul {
-	list-style: none;
-}
-.item-feedback li {
-	background-image: url(../img/star.svg);
-	background-repeat: no-repeat;
-	width: 18px;
-	height: 17px;
 }
 .inner-footer {
 	background-color: inherit;
 	
+}
+
+.four-stars:before {
+	content: "";
+	background-image: url(../img/star.svg);
+	background-repeat: repeat-x;
+	display: block;
+	width: 74px;
+	height: 18px;
+}
+.three-stars:before {
+	content: "";
+	background-image: url(../img/star.svg);
+	background-repeat: repeat-x;
+	display: block;
+	width: 56px;
+	height: 18px;
+}
+.two-stars:before {
+	content: "";
+	background-image: url(../img/star.svg);
+	background-repeat: repeat-x;
+	display: block;
+	width: 37px;
+	height: 18px;
 }

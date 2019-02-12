@@ -62,8 +62,10 @@
 						<fieldset>
 							<legend>Стоимость в сутки (Р):</legend>
 								<p class="price-range">
-									<input type="text" name="first" placeholder="от 0" aria-label="Минимальная стоимость">
-									<input type="text" placeholder="до 3000" aria-label="Максимальная стоимость">
+									от <input type="text" name="first" value="0" aria-label="Минимальная стоимость">
+								</p>
+								<p class="price-range">
+									до <input type="text" value="3000" aria-label="Максимальная стоимость">
 								</p>
 								<div class="price-change" aria-label="Ползунок управления диапазоном цены">
 									<button class="button-min"  aria-label="Минимальное значение"></button>
@@ -99,15 +101,9 @@
 								<button class="booking-button">Забронировать</button>
 							</p>
 						</div>
-						<div class="item-feedback">
-							<ul>
-								<li></li>
-								<li></li>
-								<li></li>
-								<li></li>
-							</ul>
-							<span>Рейтинг:8,5</span>
-						</div>
+						<p class="item-feedback four-stars" aria-label="4 звезды">
+							<span class="mark">Рейтинг:8,5</span>
+						</p>
 					</article>
 					<article class="search-results-item">
 						<h3 class="visually-hidden">Мотель Desert Quail Inn</h3>
@@ -121,14 +117,9 @@
 								<button class="booking-button">Забронировать</button>
 							</p>
 						</div>
-						<div class="item-feedback">
-							<ul>
-								<li></li>
-								<li></li>
-								<li></li>
-							</ul>
-							<span>Рейтинг:8,9</span>
-						</div>
+						<p class="item-feedback three-stars" aria-label="3 звезды">
+							<span class="mark">Рейтинг:8,9</span>
+						</p>
 					</article>
 					<article class="search-results-item">
 						<h3 class="visually-hidden">Гостиница Amara Resort & Spa</h3>
@@ -142,13 +133,9 @@
 								<button class="booking-button">Забронировать</button>
 							</p>
 						</div>
-						<div class="item-feedback">
-							<ul>
-								<li></li>
-								<li></li>
-							</ul>
-							<span>Рейтинг:9,2</span>
-						</div>
+						<p class="item-feedback two-stars" aria-label="2 звезды">
+							<span class="mark">Рейтинг:9,2</span>
+						</p>
 					</article>
 				</section>
 			</main>

@@ -11,7 +11,7 @@
 			<header class="main-header">
 				<nav class="main-navigation">
 					<ul class="navigation-items">
-						<li class="navigation-items-item navigation-items-current"><a>Информация</a></li>
+						<li class="navigation-items-item"><a href="#">Информация</a></li>
 						<li class="navigation-items-item"><a href="#">Фото и видео</a></li>
 						<li class="navigation-items-item"><a href="#">Карта штата</a></li>
 						<li class="navigation-items-item"><a href="#">Гостинницы</a></li>
@@ -104,7 +104,7 @@
 					<div class="reservation">
 						<span class="reservation-title">Заинтересовались?</span>
 						<p class="reservation-subtitle">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
-						<button class="search-button">Поиск гостинницы в Седоне</button> <!-- открывает выпадающий блок с формой -->
+						<button class="search-button">Поиск гостинницы в Седоне</button> 
 						<form class="form" action="https://echo.htmlacademy.ru" method="get">
 							<h3 class="visually-hidden">Форма поиска гостинницы</h3>
 							<p>
@@ -124,9 +124,9 @@
 								</p>
 								<p>
 									<label for="children-field">Дети</label>
-									<button class="value-decrease">-</button>
+									<button class="value-decrease" aria-label="Уменьшить значение"></button>
 									<input type="text" name="children" id="children-field" class="children-line" value="0">
-									<button class="value-increase">+</button>
+									<button class="value-increase" aria-label="Увеличить значение"></button>
 								</p>
 							</div>
 							<button type="submit" class="form-btn">Найти</button>
