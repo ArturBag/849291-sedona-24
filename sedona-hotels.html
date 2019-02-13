@@ -25,7 +25,7 @@
 				<section class="search-filters">
 					<h2 class="visually-hidden">Форма подбора жилья</h2>
 					<form action="https://echo.htmlacademy.ru" method="get" class="filters-form">
-						<fieldset>
+						<fieldset class="infrastructure-filter">
 							<legend>Инфраструктура:</legend>
 							<ul class="infrastructure-types">	
 								<li>
@@ -42,7 +42,7 @@
 								</li>
 							</ul>
 						</fieldset>
-						<fieldset>
+						<fieldset class="accomodation-filter">
 							<legend>Тип жилья:</legend>
 							<ul class="accommodation-types">
 								<li>	
@@ -59,7 +59,7 @@
 								</li>								
 							</ul>
 						</fieldset>
-						<fieldset>
+						<fieldset class="price-filter">
 							<legend>Стоимость в сутки (Р):</legend>
 								<p class="price-range">
 									от <input type="text" name="first" value="0" aria-label="Минимальная стоимость">
@@ -71,14 +71,17 @@
 									<button class="button-min"  aria-label="Минимальное значение"></button>
 									<button class="button-max" aria-label="Максимальное значение"></button>
 								</div>
+								<button type="submit" class="search-btn">Показать</button>
 						</fieldset>
-						<button type="submit" class="search-btn">Показать</button>
+						
 					</form>	
 				</section>
 				<section class="sort">
 					<h2 class="visually-hidden">Сортирование результатов поиска</h2>
-					<span class="sort-found">Найдено:</span>
-					<h3>Сортировка:</h3>
+					<div class="sort-wrapper">
+						<span class="sort-found">Найдено:</span>
+						<h3>Сортировка:</h3>
+					</div>
 					<ul class="sort-types">
 						<li class="sort-type current-filter"><a>По цене</a></li>
 						<li class="sort-type"><a href="#">По типу</a></li>
@@ -140,24 +143,26 @@
 				</section>
 			</main>
 			<footer class="main-footer inner-footer">
-				<p class="main-footer-hash">
-					<a href="#" class="hashtag">
-						#visitsedona
-					</a>
-				</p>
-				<div class="main-footer-socials">
-					<ul class="social-networks">
-						<li><a href="#" class="social-networks-icon social-networks-twitter" aria-label="ссылка на страницу города в твиттере">Твиттер</a></li>
-						<li><a href="#" class="social-networks-icon social-networks-facebook" aria-label="ссылка на страницу города в фейсбуке">Фейсбук</a></li>
-						<li><a href="#" class="social-networks-icon social-networks-youtube" aria-label="ссылка на страницу города в ютубе">Ютуб</a></li>
-					</ul>
+				<div class="footer-wrapper">
+					<p class="main-footer-hash">
+						<a href="#" class="hashtag">
+							#visitsedona
+						</a>
+					</p>
+					<div class="main-footer-socials">
+						<ul class="social-networks">
+							<li><a href="#" class="social-networks-icon social-networks-twitter" aria-label="ссылка на страницу города в твиттере"><span class="visually-hidden">Твиттер</span></a></li>
+							<li><a href="#" class="social-networks-icon social-networks-facebook" aria-label="ссылка на страницу города в фейсбуке"><span class="visually-hidden">Фейсбук</span></a></li>
+							<li><a href="#" class="social-networks-icon social-networks-youtube" aria-label="ссылка на страницу города в ютубе"><span class="visually-hidden">Ютуб</span></a></li>
+						</ul>
+					</div>
+					<p class="footer-copyright">
+						<a href="https://htmlacademy.ru/intensive/htmlcss" class="footer-copyright-link" aria-label="Ссылка на разработчиков данного сайта">
+							<span>Website by</span>
+							<img src="img/logo_name.svg" class="html-academy-logo" width="115" height="41" alt="Логотип HTML Academy">
+						</a>
+					</p>
 				</div>
-				<p class="footer-copyright">
-					<a href="https://htmlacademy.ru/intensive/htmlcss" class="footer-copyright-link" aria-label="Ссылка на разработчиков данного сайта">
-						<span>Website by</span>
-						<img src="img/logo_name.svg" class="html-academy-logo" width="115" height="41" alt="Логотип HTML Academy">
-					</a>
-				</p>
 			</footer>
 		</body>
 	</html>
