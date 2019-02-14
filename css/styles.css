@@ -14,15 +14,11 @@ body {
 	text-transform: uppercase;
 	background-color: #f2f2f2;
 }
-.inner-page {
-	background-image: none;
-	background-color: #f2f2f2;
-}
 
 a {
 	text-decoration: none;
 }
-.visually-hidden:not(:focus):not(:active){
+.visually-hidden {
   position: absolute;
 
   width: 1px;
@@ -43,7 +39,7 @@ a {
 .main-header,
 .container,
 .main-footer {
-	max-width: 1200px;
+	width: 1200px;
     margin: 0 auto;
 }
 .main-header{
@@ -67,20 +63,16 @@ a {
 .navigation-items {
 	display: flex;
     justify-content: space-between;
-    max-width: 1056px;
+    width: 1056px;
     min-height: 56px;
     margin: 0 auto;
     align-items: center;
 }
 .navigation-items-item {
-	/*max-width: 128px;*/
 	width: 20%;
 }
-.navigation-items-item:nth-child(2) {
-	margin-right: auto;
-}
 .navigation-items-item:nth-child(2) a {
-padding-left: 30px;
+	padding-left: 30px;
 }
 .navigation-items-item:nth-child(3) {
 	margin-left: auto;
@@ -121,7 +113,7 @@ padding-left: 30px;
 .preview{
 	background-color: #ddd0d4;
 	background:url('../img/background photo.jpg') no-repeat;
-	background-position: center 0;
+	background-position: 50% 0;
 	text-align: center;
 	padding-top: 75px;
 	padding-bottom: 80px;
@@ -180,6 +172,9 @@ padding-left: 30px;
 .item-subheading {
 	line-height: 21px;
 }
+.item-number {
+	display: block;
+}
 .advantages-item-image {
 	background-color: #ddd0d4;
 	height: 100%;
@@ -195,11 +190,8 @@ padding-left: 30px;
 }
 .features-list {
 	display: flex;
-	/* justify-content: space-around; */
-	/* width: 100%; */
 }
 .reservation {
-	/* margin: 0 auto; */
 	text-align: center;
 }
 .hotel-booking .form {
@@ -220,7 +212,7 @@ padding-left: 30px;
 }
 .search-button {
 	background-color: #766357;
-	max-width: 568px;
+	width: 568px;
 	border: none;
 	color: #ffffff;
 	font-family: "PT Sans";
@@ -276,7 +268,7 @@ padding-left: 30px;
 	color:#ffffff;
 	border: none;
 	background-color: #81b3d2;
-	max-width: 458px;
+	width: 458px;
 	text-transform: uppercase;
 }
 .form-btn:hover,
@@ -300,11 +292,7 @@ padding-left: 30px;
 	display: flex;
 	justify-content: space-evenly;
 }
-.main-footer-hash,
-.footer-copyright {
-	margin: 0;
-	padding: 0;
-}
+
 .hashtag {
 	font-size:21px;
 	line-height: 26px;
@@ -405,7 +393,7 @@ padding-left: 30px;
 	line-height: 21px;
 	text-transform: uppercase;
 	background: transparent;
-	max-width: 133px;
+	width: 133px;
 	border: 2px solid #ffffff;
 }
 .search-btn:hover {
@@ -488,7 +476,7 @@ padding-left: 30px;
 .booking-button {
 	border:none;
 	background-color: #766357;
-	max-width: 142px;
+	width: 142px;
 	color: #ffffff;
 	font:inherit;
 	font-weight: 700;
