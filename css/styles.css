@@ -110,7 +110,7 @@ img {
 	position: absolute;
 	top:0;
 	left:50%;
-	margin-left: -70px;
+	transform: translateX(-50%);
 	z-index: 1;
 }
 .container {
@@ -122,18 +122,18 @@ img {
 	background-position: 50% 22%;
 	text-align: center;
 	padding-top: 75px;
-	padding-bottom: 80px;
+	padding-bottom: 75px;
 	position: relative;
-	margin-bottom: 52px;
+	margin-bottom: 58px;
 }
 .preview::after {
 	content: "";
 	position: absolute;
 	background-image: url(../img/polygon.svg);
-	width: 1201px;
-	height: 59px;
+	width: 1200px;
+	height: 57px;
 	left: 0;
-	bottom: 0
+	bottom: 0;
 }
 .container-description {
 	display: flex;
@@ -149,7 +149,7 @@ img {
 .advantages-item-section {
 	display: flex;
 	flex-wrap: wrap;
-	height: 256px;
+	/* height: 256px; */
 }
 .main-heading {
 	font-size: 21px;
@@ -173,7 +173,7 @@ img {
 }
 .advantages .advantages-item:first-child {
 	order:-2;
-	margin-bottom: 56px;
+	margin-bottom: 48px;
 }
 .advantages-item-features {
 	order:-1;
@@ -195,7 +195,7 @@ img {
 	font-size: 21px;
 	line-height: 21px;
 	font-weight: bold;
-	margin: 45px auto 25px auto;
+	margin: 45px auto 25px;
 	padding: 0;
 	width: 50%;
 }
@@ -219,23 +219,21 @@ img {
 }
 .item-number {
 	display: block;
-	position: relative;
 	margin-bottom: 19px;
 }
 .item-number::before,
 .item-number::after{
 	content: "";
 	background: #ffffff;
-	position: absolute;
+	display: inline-block;
 	width: 9px;
 	height: 2px;
-	top: 50%;
+	vertical-align: middle;
+	margin: 0 4px 4px 6px;
 }
 .item-number::before {
-	left: 44%;
 }
 .item-number::after {
-	right: 44%;
 }
 .advantages-item:nth-child(n+3) .item-number::before, 
 .advantages-item:nth-child(n+3) .item-number::after {
@@ -243,7 +241,7 @@ img {
 }
 
 .advantages-item-wrapper {
-	margin-top: 47px;
+	margin-top: 37px;
 	width: 100%;
 	padding-bottom: 60px;
 }
@@ -295,7 +293,7 @@ img {
 	width: 33%;
 	display: flex;
 	flex-direction: column;
-	margin: 2px 4px 0px 4px;
+	margin: 2px 4px 0px;
 }
 .item-features-image{
 	margin-bottom: 29px;
@@ -311,6 +309,7 @@ img {
 .reservation {
 	text-align: center;
 	padding-top: 50px;
+	position:relative;
 }
 .hotel-booking .form {
 	box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
@@ -330,6 +329,7 @@ img {
 	font-weight: 400;
 	line-height: 24px;
 	color: #333333;
+	margin: 0;
 	margin-top: 22px;
 	margin-bottom: 46px;
 }
@@ -352,6 +352,18 @@ img {
 .search-button:active {
 	background-color: #503e33;
 }
+.hotel-booking .form {
+	position: absolute;
+	display: block;
+	z-index: 2;
+	bottom: -395px;
+	left: 316px;
+	background-color: #ffffff;
+	width: 568px;
+	height: 395px;
+	box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+	padding: 0 54px;
+}
 .hotel-booking .form label {
 	font-weight: bold;
 }
@@ -360,15 +372,119 @@ img {
 	background-color: #f2f2f2;
 	border: none;
 }
-.check-in-date,
-.check-out-date {
-	width: 346px;
+.check-in,
+.check-out,
+.adults,
+.children {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
 }
+
+.check-in {
+	margin: 56px 0px 29px 0;
+	display: flex;
+	justify-content: space-between;
+}
+.check-in-label,
+.check-out-label {
+	padding-left: 3px;
+}
+.check-in input,
+.check-out input{
+	max-width: 346px;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 1px 30px 0 13px;
+	background: url(../img/calendar.svg) no-repeat 315px center;
+}
+.check-out {
+	margin: 0 0 30px 0;
+}
+
+.form-item {
+	display: flex;
+	justify-content: space-between;
+	margin: 0;
+	padding: 0;
+	margin-bottom: 54px;
+}
+.form-item button {
+	width: 38px;
+	height: 37px;
+	background-color: #f2f2f2;
+	border: none;
+	position: relative;
+}
+.form-item .value-decrease::before {
+	content: "";
+	position: absolute;
+	width: 12px;
+	height: 3px;
+	background-color: #a9a9a9;
+	top: 50%;
+	left: 50%;
+	margin-left: -5px;
+}
+.adults .value-decrease {
+	left: 42px;
+}
+.form-item .value-increase::before,
+.form-item .value-increase::after  {
+	content: "";
+	position: absolute;
+	width: 12px;
+	height: 3px;
+	background-color: #a9a9a9;
+} 
+.form-item .value-increase::before {
+	top: 50%;
+	left: 50%;
+	margin-left: -6px;
+	margin-top: -1px;
+}
+.form-item .value-increase::after {
+	top: 50%;
+	left: 50%;
+	margin-left: -6px;
+	margin-top: -1px;
+	transform: rotate(90deg);
+}
+.button-wrapper-adults .value-increase,
+.button-wrapper-children .value-increase {
+	top: 0;
+	right: 0;
+	position: absolute;
+}
+
 .adults-line,
 .children-line {
 	width: 114px;
+	box-sizing: border-box;
+	padding: 0;
 }
-
+.adults-line {
+	text-align: center;
+}
+.children-line {
+	text-align: center;
+}
+.button-wrapper-adults{
+	position: relative;
+	margin-left: 45px;
+}
+.button-wrapper-adults .value-decrease,
+.button-wrapper-children .value-decrease {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.button-wrapper-children {
+	position: relative;
+	margin-left: 31px;
+}
 .hotel-booking .form input:hover{
 	background-color:#ebebeb;
 }
@@ -384,6 +500,19 @@ img {
 .value-increase {
 	color:#a9a9a9;
 }
+.value-decrease:hover::before,
+.value-decrease:focus::before,
+.value-increase:hover::after,
+.value-increase:focus::after,
+.value-increase:hover::before,
+.value-increase:focus::before{
+	background-color: #000000;
+}
+.value-decrease:active::before,
+.value-increase:active::after,
+.value-increase:active::before{
+	background-color: #81b3d2;
+}
 .form-btn {
 	font: inherit;
 	font-size: 21px;
@@ -392,8 +521,11 @@ img {
 	color:#ffffff;
 	border: none;
 	background-color: #81b3d2;
-	width: 458px;
+	width: 100%;
 	text-transform: uppercase;
+	margin: 0;
+	padding: 0;
+	padding: 16px 0 17px;
 }
 .form-btn:hover,
 .form-btn:focus{
@@ -401,14 +533,13 @@ img {
 }
 .form-btn:active {
 	background-color: #5496bd;
-	opacity: 0.3;
-	color: #ffffff;
-
 }
+ .form-btn:active .btn-text{
+ 	opacity: 0.3;
+ }
 .hotel-booking-location {
 	margin: 0;
 	padding: 0;
-	/* margin-top: 0px; */
 }
 .map {
 	position: relative;
@@ -423,27 +554,31 @@ img {
 }
 .footer-wrapper {
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
+	margin: 0 auto;
+	padding: 0 73px;
 }
 
 .hashtag {
 	font-size:21px;
 	line-height: 26px;
 	color:#000000;
-	margin: 7px 0 0 25px;
+	font-weight: 700;
+	margin: 7px 0 0 0;
 	display: block;
-	width: 240px;
-	text-align: right;
-	padding: 0 45px 0 0px;
+	width: 33%;
+	padding: 3px 0 0 60px;
+	text-align: left;
+	box-sizing: border-box;
 }
 .footer-socials {
-width: 400px;
+	width: 33%;
 }
 .social-networks {
 	display: flex;
 	justify-content: space-between;
-	width: 150px;
 	flex-wrap: wrap;
+	width: 44%;
 	margin: 0 auto;
 }
 .social-networks li {
@@ -453,47 +588,43 @@ width: 400px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	padding: 8px 0 0 0;
 }
 .social-networks li:hover,
 .social-networks li:focus {
-	/*background-color: :#669ec0;*/
-	background-color: :red;
+	background-color: #669ec0;
 }
 .social-networks li:active {
-
+	background-color: #5496bd;
 }
-.social-networks-twitter {
-	background: url(../img/twitter.svg);
-	background-repeat: no-repeat;
-	background-position: center center;
-}
-.social-networks-facebook {
-	background: url(../img/fb-icon.svg);
-	background-repeat: no-repeat;
-	background-position: center center;
-}
-.social-networks-youtube {
-	background: url(../img/youtube.svg);
-	background-repeat: no-repeat;
-	background-position: center center;
+.social-networks li:active path {
+	opacity: 0.3;
 }
 .footer-copyright a {
 	color:#000000;
-
+}
+.footer-copyright-link path {
+	fill:#000000;
 }
 .footer-copyright-link {
 	display: flex;
-	width: 241px;
-	margin: 0px 10px 0 0px;
+	width: 33%;
+	align-items: center;
+	justify-content: flex-end;
+	padding: 0 27px 4px 0px;
 }
 .footer-copyright-link  span{
-margin: 9px 0 0 0;
+	margin: 7px 9px 0 0px;
+	color: #000000;
+}
+.footer-copyright-link:hover path,
+.footer-copyright-link:focus path{
+	fill:#81b3d2;;
+}
+.footer-copyright-link:active path{
+	fill:#bdbbbc;
 }
 
-.html-academy-logo {
-    margin: 2px 0 0 9px;
-}
-.html-academy-logo:hover {}
 
 /*--------Sedona Hotels Page------*/
 
