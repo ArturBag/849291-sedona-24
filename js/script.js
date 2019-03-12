@@ -1,56 +1,38 @@
 var modalOpen = document.querySelector(".search-button");
 var popup = document.querySelector(".form");
-var formButton = popup.querySelector(".form-btn"); 
+var formButton = popup.querySelector(".form-btn");
 
 var adultsField = popup.querySelector("[name=adults]");
 var childrenField = popup.querySelector("[name=children]");
 
-var storageAdults="";
-var storageChildren="";
-var isStorageSupportChildren = true;
-var isStorageSupportAdults = true;
+var storageAdults = localStorage.getItem("adults");
+var storageChildren = localStorage.getItem("children");
 
-try {
-	storageAdults.localStorage.geItem("adults");
-} catch(err){
-	isStorageSupportAdults = false;
-}
-try {
-	storageChildren.localStorage.geItem("children");
-} catch(err){
-	isStorageSupportChildren = false;
-}
 
-modalOpen.addEventListener("click", function(evt){
+modalOpen.addEventListener("click", function (evt) {
 	evt.preventDefault();
 	popup.classList.toggle("form-show");
 
-	if(storageAdults || storageChildren){
+	if (storageAdults || storageChildren) {
 		adultsField.value = storageAdults;
 		childrenField.value = storageChildren;
 	}
 
 });
 
-formButton.addEventListener("submit", function(evt){
-	if(!adultsField.value || !childrenField.value){
+popup.addEventListener("submit", function (evt) {
+	if (!adultsField.value || !childrenField.value) {
 		evt.preventDefault();
-		console.log("введите чилса");
 	} else {
-		if (isStorageSupportAdults){
-				localStorage.setItem("adults",adultsField.value);
-			}
-		if (isStorageSupportChildren){
-				localStorage.setItem("children",childrenField.value);
-		}
+		localStorage.setItem("adults", adultsField.value);
+		localStorage.setItem("children", childrenField.value);
 	}
-			
 });
 
-window.addEventListener("keydown", function(evt){
-	if(evt.keyCode === 27){
+window.addEventListener("keydown", function (evt) {
+	if (evt.keyCode === 27) {
 		evt.preventDefault();
-		if(popup.classList.contains("form-show")){
+		if (popup.classList.contains("form-show")) {
 			popup.classList.remove("form-show");
 		}
 	}
