@@ -5,6 +5,8 @@ var formButton = popup.querySelector(".form-btn");
 var adultsField = popup.querySelector("[name=adults]");
 var childrenField = popup.querySelector("[name=children]");
 
+popup.classList.add("form-hidden");
+
 try {
 	var storageAdults = localStorage.getItem("adults");
 	var storageChildren = localStorage.getItem("children");
