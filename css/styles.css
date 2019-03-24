@@ -793,7 +793,8 @@ img {
 .hotel-booking-location {
 	margin: 0;
 	padding: 0;
-	background: url("../img/map.jpg");
+	background-color: #cbdda9;
+	background-image: url("../img/map.jpg");
 	width: 1200px;
 	height: 593px;
 }
